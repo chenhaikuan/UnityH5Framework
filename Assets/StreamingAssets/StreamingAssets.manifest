@@ -1,7 +1,10 @@
 ManifestFileVersion: 0
-CRC: 362842804
+CRC: 2742375117
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: loading
+      Dependencies: {}
+    Info_1:
+      Name: npc
       Dependencies: {}

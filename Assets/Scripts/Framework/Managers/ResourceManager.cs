@@ -7,6 +7,11 @@ public class ResourceManager : UnitySingleton<ResourceManager>
 {
     private readonly Dictionary<string, AssetBundle> _loadedAssetBundles = new Dictionary<string, AssetBundle>();
     private readonly Dictionary<string, DateTime> _lastUsedTime = new Dictionary<string, DateTime>();
+
+    ResourceManager()
+    {
+        SysDefine.resUrl= Application.streamingAssetsPath + "/";
+    }
     
     // public IEnumerator LoadAssetBundleAsync(string bundleName, string path, Action<float> onProgress)
     // {

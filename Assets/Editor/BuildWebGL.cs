@@ -18,6 +18,10 @@ public class BuildWebGL : EditorWindow
         {
             return;
         }
-        BuildPipeline.BuildAssetBundles(packagePath, BuildAssetBundleOptions.UncompressedAssetBundle, target);
+        AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(packagePath, BuildAssetBundleOptions.UncompressedAssetBundle, target);
+        foreach (string bundleName in manifest.GetAllAssetBundles())
+        {
+            Debug.Log(bundleName);
+        }
     }
 }

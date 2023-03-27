@@ -25,7 +25,7 @@ public class UIMgr : UnitySingleton<UIMgr> {
         //GameObject ui_prefab = ResMgr.Instance.GetAssetCache<GameObject>(this.ui_prefab_root + name + ".prefab");
         // AssetBundle bundle = null;
         ResourceManager resMgr = ResourceManager.Instance;
-        StartCoroutine(resMgr.LoadAssetBundleAsync( name, Application.streamingAssetsPath + "/",(bundle)=>{
+        StartCoroutine(resMgr.LoadAssetBundleAsync( name,SysDefine.resUrl ,(bundle)=>{
             UnityEngine.Object ui_prefab  = resMgr.LoadAsset<GameObject>(name,name);
             GameObject ui_view = GameObject.Instantiate(ui_prefab) as GameObject;
 
